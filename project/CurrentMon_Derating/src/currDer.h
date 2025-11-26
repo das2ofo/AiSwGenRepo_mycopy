@@ -200,20 +200,22 @@ sint16 CurrentMon_SetDeratingLimits_s16(const sint16 x_var,
  *
  * @par Interface summary
  *
- * | Interface                      | In | Out | Data type        | Param                                               | Data factor | Data offset | Data size                       | Data range             | Data unit |
- * |--------------------------------|:--:|:---:|------------------|-----------------------------------------------------|------------:|------------:|--------------------------------:|-----------------------|-----------|
- * | CurrentMon_SetDeratingLimits_s16() | ✓  |     | sint16           | (const sint16, const CurrentMon_mathApplPoint_t*, const uint8)|           1 |           0 |                               1 | [INT16_MIN, INT16_MAX]| [-]       |
- * | VoltMeas_get_vbat_u16()            | ✓  |     | uint16           | (void)                                              |           1 |           0 |                               1 | [0, UINT16_MAX]       | [mV]      |
- * | TempMeas_get_filtEcuTemp_s16() | ✓  |     | sint16           | (void)                                              |           1 |           0 |                               1 | [INT16_MIN, INT16_MAX]| [°C]      |
- * | CurrentMon_IdcVdcTab           | ✓  |     | CurrentMon_mathApplPoint_t | –                                                   |           1 |           0 | CURRENTMON_IDC_VDC_N_POINTS     | [-]                   | [-]       |
- * | CurrentMon_IdcTecuTab          | ✓  |     | CurrentMon_mathApplPoint_t | –                                                   |           1 |           0 | CURRENTMON_IDC_TECU_N_POINTS    | [-]                   | [-]       |
- * | CurrentMon_IlineTecuTab        | ✓  |     | CurrentMon_mathApplPoint_t | –                                                   |           1 |           0 | CURRENTMON_ILINE_TECU_N_POINTS  | [-]                   | [-]       |
- * | CurrentMon_IlineLim_s16        |    | ✓   | sint16           | –                                                   |           1 |           0 |                               1 | [INT16_MIN, INT16_MAX]| [-]       |
- * | CurrentMon_IdcLim_s16          |    | ✓   | sint16           | –                                                   |           1 |           0 |                               1 | [INT16_MIN, INT16_MAX]| [-]       |
+ * | Interface                          | In | Out | Data type                  | Param                                                          | Data factor | Data offset | Data size                      | Data range             | Data unit |
+ * |------------------------------------|:--:|:---:|----------------------------|----------------------------------------------------------------|------------:|------------:|-------------------------------:|------------------------|-----------|
+ * | CurrentMon_SetDeratingLimits_s16() | ✓  |     | sint16                     | (const sint16, const CurrentMon_mathApplPoint_t*, const uint8) |           1 |           0 |                            1   | [INT16_MIN, INT16_MAX] | [-]       |
+ * | VoltMeas_get_vbat_u16()            | ✓  |     | uint16                     | (void)                                                         |           1 |           0 |                            1   | [0, UINT16_MAX]        | [mV]      |
+ * | TempMeas_get_filtEcuTemp_s16()     | ✓  |     | sint16                     | (void)                                                         |           1 |           0 |                            1   | [INT16_MIN, INT16_MAX] | [°C]      |
+ * | CURRENT_MON_IDC_VDC_N_POINTS       | ✓  |     | macro                      | –                                                              |           1 |           0 |                            1   |            [7]         | [-]       |
+ * | CURRENT_MON_IDC_TECU_N_POINTS      | ✓  |     | macro                      | –                                                              |           1 |           0 |                            1   |            [5]         | [-]       |
+ * | CURRENT_MON_ILINE_TECU_N_POINTS    | ✓  |     | macro                      | –                                                              |           1 |           0 |                            1   |            [6]         | [-]       |
+ * | CurrentMon_IdcVdcTab               | ✓  |     | CurrentMon_mathApplPoint_t | –                                                              |           1 |           0 | CURRENTMON_IDC_VDC_N_POINTS    | [-]                    | [-]       |
+ * | CurrentMon_IdcTecuTab              | ✓  |     | CurrentMon_mathApplPoint_t | –                                                              |           1 |           0 | CURRENTMON_IDC_TECU_N_POINTS   | [-]                    | [-]       |
+ * | CurrentMon_IlineTecuTab            | ✓  |     | CurrentMon_mathApplPoint_t | –                                                              |           1 |           0 | CURRENTMON_ILINE_TECU_N_POINTS | [-]                    | [-]       |
+ * | CurrentMon_IlineLim_s16            |    | ✓   | sint16                     | –                                                              |           1 |           0 |                            1   | [INT16_MIN, INT16_MAX] | [-]       |
+ * | CurrentMon_IdcLim_s16              |    | ✓   | sint16                     | –                                                              |           1 |           0 |                            1   | [INT16_MIN, INT16_MAX] | [-]       |
  *
  * @par Activity diagram
- * The following activity diagram summarizes the execution flow of
- * CurrentMon_Derating():
+ * The following activity diagram summarizes the execution flow of CurrentMon_Derating():
  *
  * @par Activity diagram (PlantUML)
  *
